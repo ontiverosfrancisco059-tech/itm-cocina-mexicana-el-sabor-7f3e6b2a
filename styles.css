@@ -167,17 +167,15 @@ section,.section{padding:38px 0}
 }
 
 :root {
-    --color-primary: red;
-    --color-secondary: orange;
-    --color-background: cream;
+    --color-rojo: #FF0000;
+    --color-naranja: #FFA500;
+    --color-crema: #FFFDD0;
 }
 .hero {
-    background-color: var(--color-background);
+    background-color: var(--color-crema);
 }
-.section-head {
-    color: var(--color-primary);
-}
-.button {
-    background-color: var(--color-secondary);
-    color: white;
+.contact-card {
+    background-color: var(--color-naranja);
+    padding: 20px;
+    border-radius: 5px;
 }
