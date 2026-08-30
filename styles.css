@@ -1,7 +1,7 @@
 :root{
   --bg:#0d1526;
-  --bg-2:#13203a;
-  --bg-3:#1b2b49;
+  --bg-2:#14213a;
+  --bg-3:#1d2f4f;
   --surface:#ffffff;
   --surface-soft:rgba(255,255,255,.82);
   --surface-line:rgba(255,255,255,.18);
@@ -253,15 +253,11 @@ svg{display:block;max-width:100%}
   background:#27c7ff;
 }
 
-main > section:not(.hero){
-  position:relative;
-}
-main > section:not(.hero):nth-of-type(even){
-  background:linear-gradient(180deg, rgba(255,255,255,.24), rgba(255,255,255,.08));
-}
-
 section,.section{
   padding:50px 0;
+}
+.section-surface{
+  padding:30px;
 }
 
 .section-head{
@@ -300,7 +296,9 @@ section,.section{
 
 .feature-card,
 .stat-card,
-.contact-card{
+.contact-card,
+.process-item,
+.trust-item-premium{
   position:relative;
   padding:26px;
   border-radius:22px;
@@ -309,9 +307,12 @@ section,.section{
   box-shadow:0 14px 40px rgba(10,20,35,.07);
   overflow:hidden;
 }
+
 .feature-card::before,
 .stat-card::before,
-.contact-card::before{
+.contact-card::before,
+.process-item::before,
+.trust-item-premium::before{
   content:"";
   position:absolute;
   inset:0 0 auto 0;
@@ -319,19 +320,54 @@ section,.section{
   background:linear-gradient(90deg,var(--primary),var(--primary-2));
   opacity:.95;
 }
+
 .feature-card strong,
 .stat-card strong,
-.contact-card h3{
+.contact-card h3,
+.process-copy strong,
+.trust-item-premium strong{
   display:block;
   margin-bottom:10px;
   font-size:1.08rem;
   line-height:1.18;
 }
+
 .feature-card p,
 .stat-card p,
-.contact-card p{
+.contact-card p,
+.process-copy p,
+.trust-item-premium p{
   margin:0;
   color:var(--muted);
+}
+
+.process-list{
+  display:grid;
+  gap:16px;
+}
+.process-item{
+  display:grid;
+  grid-template-columns:56px minmax(0,1fr);
+  gap:16px;
+  align-items:start;
+}
+.process-index{
+  width:40px;
+  height:40px;
+  border-radius:999px;
+  display:grid;
+  place-items:center;
+  background:linear-gradient(135deg,var(--primary),var(--primary-2));
+  color:#fff;
+  font-weight:800;
+  position:relative;
+  z-index:1;
+}
+
+.trust-list-premium{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:18px;
 }
 
 .tag-list{
@@ -352,25 +388,31 @@ section,.section{
   font-size:.9rem;
 }
 
-.list{
-  display:grid;
-  gap:12px;
-  padding:0;
-  margin:0;
-  list-style:none;
-}
-.list li{
-  padding:16px 18px;
-  border-radius:16px;
-  background:rgba(255,255,255,.84);
-  border:1px solid rgba(20,32,51,.08);
-}
-
 .inline-links{
   display:flex;
   flex-wrap:wrap;
   gap:12px;
   margin-top:22px;
+}
+
+.hero-note{
+  margin-top:20px;
+  padding:14px 16px;
+  border-radius:16px;
+  background:rgba(255,255,255,.08);
+  border:1px solid var(--surface-line);
+  color:var(--muted-inverse);
+}
+
+.topbar-actions{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.contact-card a{
+  word-break:break-word;
 }
 
 .site-footer{
@@ -392,12 +434,8 @@ section,.section{
   gap:10px 18px;
   align-items:center;
 }
-.footer-meta strong{
-  color:#fff;
-}
-.footer-meta span{
-  color:var(--muted-inverse);
-}
+.footer-meta strong{color:#fff}
+.footer-meta span{color:var(--muted-inverse)}
 
 .brand-mark svg{
   width:100%;
@@ -408,11 +446,236 @@ section,.section{
   height:auto;
 }
 
+/* restaurante */
+.theme-restaurante{
+  background:
+    radial-gradient(820px 420px at 0% 0%, rgba(199,88,43,.14), transparent 56%),
+    radial-gradient(740px 400px at 100% 0%, rgba(240,163,58,.10), transparent 54%),
+    linear-gradient(180deg,#120c0b 0%,#20120f 100%);
+}
+.theme-restaurante .topbar{
+  background:rgba(24,14,11,.78);
+  border-color:rgba(255,216,180,.12);
+}
+.theme-restaurante .brand-copy strong{color:#fff}
+.theme-restaurante .brand-copy span{color:rgba(255,231,203,.70)}
+.theme-restaurante .topbar-actions .button-secondary{
+  background:rgba(255,255,255,.06);
+  color:var(--text-inverse);
+  border-color:rgba(255,255,255,.12);
+}
+.theme-restaurante .hero-art{
+  background:
+    radial-gradient(circle at top left, rgba(255,194,122,.12), transparent 26%),
+    linear-gradient(160deg, rgba(199,88,43,.14), rgba(240,163,58,.08) 55%, rgba(255,228,190,.10));
+}
+.theme-restaurante #especialidades .surface,
+.theme-restaurante #diferenciales .surface,
+.theme-restaurante #contacto .surface{
+  background:linear-gradient(180deg, rgba(34,20,16,.96), rgba(21,13,11,.94));
+  border-color:rgba(255,216,180,.12);
+  color:var(--text-inverse);
+}
+.theme-restaurante #especialidades .section-head p,
+.theme-restaurante #diferenciales .section-head p,
+.theme-restaurante #contacto .section-head p,
+.theme-restaurante #contacto .contact-card p,
+.theme-restaurante #contacto .contact-card a,
+.theme-restaurante #especialidades .feature-card p,
+.theme-restaurante #diferenciales .stat-card p{
+  color:rgba(245,233,214,.76);
+}
+.theme-restaurante #especialidades .feature-card,
+.theme-restaurante #diferenciales .stat-card,
+.theme-restaurante #contacto .contact-card{
+  background:rgba(255,255,255,.05);
+  border-color:rgba(255,216,180,.10);
+  box-shadow:none;
+}
+.theme-restaurante #especialidades .feature-card strong,
+.theme-restaurante #diferenciales .stat-card strong,
+.theme-restaurante #contacto .contact-card h3{
+  color:#fff7ec;
+}
+.theme-restaurante .footer-surface{
+  background:linear-gradient(135deg,#150d0c,#241310);
+}
+
+/* catalogo */
+.theme-catalogo .hero-copy{
+  background:
+    radial-gradient(circle at top right, rgba(145,216,255,.16), transparent 26%),
+    linear-gradient(135deg,#0d1830 0%,#162346 58%,#1f335e 100%);
+}
+.theme-catalogo .topbar-actions .button-secondary{
+  background:#fff;
+  color:var(--text);
+  border-color:rgba(20,32,51,.10);
+}
+.theme-catalogo #catalogo .surface,
+.theme-catalogo #proceso .surface,
+.theme-catalogo #contacto .surface{
+  background:rgba(255,255,255,.92);
+}
+.theme-catalogo #beneficios .surface{
+  background:linear-gradient(135deg,#0f1a34 0%,#18284c 100%);
+  border-color:rgba(255,255,255,.10);
+  color:var(--text-inverse);
+}
+.theme-catalogo #beneficios .section-head p,
+.theme-catalogo #beneficios .stat-card p{
+  color:rgba(236,243,255,.76);
+}
+.theme-catalogo #beneficios .stat-card{
+  background:rgba(255,255,255,.06);
+  border-color:rgba(255,255,255,.12);
+  box-shadow:none;
+}
+.theme-catalogo #beneficios .stat-card strong{
+  color:#fff;
+}
+.theme-catalogo .process-item{
+  background:linear-gradient(180deg,#ffffff 0%,#f4f8ff 100%);
+}
+.theme-catalogo .footer-surface{
+  background:linear-gradient(135deg,#0d1830,#162346);
+}
+
+/* hotel */
+.theme-hotel{
+  background:
+    radial-gradient(820px 420px at 0% 0%, rgba(231,201,143,.10), transparent 58%),
+    linear-gradient(180deg,#f7f2e9 0%,#efe8dc 100%);
+}
+.theme-hotel .topbar{
+  background:rgba(255,251,245,.82);
+  border-color:rgba(74,56,28,.10);
+}
+.theme-hotel .hero-copy{
+  background:
+    radial-gradient(circle at top right, rgba(231,201,143,.14), transparent 24%),
+    linear-gradient(135deg,#101b2d 0%,#172741 62%,#21365c 100%);
+}
+.theme-hotel .button{
+  background:linear-gradient(135deg,#b78c45,#e7c98f);
+  color:#1c140d;
+  box-shadow:0 18px 34px rgba(183,140,69,.22);
+}
+.theme-hotel .hero-note{
+  background:rgba(255,255,255,.10);
+}
+.theme-hotel #principal .surface,
+.theme-hotel #secundario .surface,
+.theme-hotel #confianza .surface,
+.theme-hotel #contacto .surface{
+  background:linear-gradient(180deg, rgba(255,250,244,.96), rgba(249,242,233,.94));
+}
+.theme-hotel .feature-card,
+.theme-hotel .stat-card,
+.theme-hotel .trust-item-premium,
+.theme-hotel .contact-card{
+  background:linear-gradient(180deg,#fffdf8 0%,#fbf5eb 100%);
+}
+.theme-hotel .footer-surface{
+  background:linear-gradient(135deg,#101b2d,#1a2b46);
+}
+
+/* landing */
+.theme-landing .hero-copy{
+  background:
+    radial-gradient(circle at top right, rgba(184,239,255,.18), transparent 26%),
+    linear-gradient(135deg,#161428 0%,#1f1c36 56%,#2a2550 100%);
+}
+.theme-landing .hero h1{
+  max-width:12ch;
+}
+.theme-landing #contacto .surface{
+  background:linear-gradient(135deg,#17152c 0%,#201d39 100%);
+  border-color:rgba(255,255,255,.10);
+  color:var(--text-inverse);
+}
+.theme-landing #contacto .section-head p,
+.theme-landing #contacto .contact-card p,
+.theme-landing #contacto .contact-card a{
+  color:rgba(236,243,255,.76);
+}
+.theme-landing #contacto .contact-card{
+  background:rgba(255,255,255,.06);
+  border-color:rgba(255,255,255,.12);
+  box-shadow:none;
+}
+.theme-landing #contacto .contact-card h3{
+  color:#fff;
+}
+.theme-landing .footer-surface{
+  background:linear-gradient(135deg,#161428,#221f40);
+}
+
+/* inmobiliaria */
+.theme-inmobiliaria .hero-copy{
+  background:
+    radial-gradient(circle at top right, rgba(212,222,255,.16), transparent 24%),
+    linear-gradient(135deg,#14181f 0%,#1d242e 60%,#273242 100%);
+}
+.theme-inmobiliaria .topbar-actions .button-secondary{
+  background:#fff;
+  color:var(--text);
+  border-color:rgba(20,32,51,.10);
+}
+.theme-inmobiliaria #principal .surface{
+  background:linear-gradient(180deg,#ffffff 0%,#f9fbff 100%);
+}
+.theme-inmobiliaria #secundario .surface{
+  background:linear-gradient(180deg,#f5f8ff 0%,#eef3fb 100%);
+}
+.theme-inmobiliaria #confianza .surface{
+  background:linear-gradient(135deg,#1a2230 0%,#243149 100%);
+  border-color:rgba(255,255,255,.10);
+  color:var(--text-inverse);
+}
+.theme-inmobiliaria #confianza .section-head p,
+.theme-inmobiliaria #confianza .trust-item-premium p{
+  color:rgba(236,243,255,.76);
+}
+.theme-inmobiliaria #confianza .trust-item-premium{
+  background:rgba(255,255,255,.06);
+  border-color:rgba(255,255,255,.12);
+  box-shadow:none;
+}
+.theme-inmobiliaria #confianza .trust-item-premium strong{
+  color:#fff;
+}
+.theme-inmobiliaria .footer-surface{
+  background:linear-gradient(135deg,#14181f,#1d242e);
+}
+
+/* general */
+.theme-general .hero-copy{
+  background:
+    radial-gradient(circle at top right, rgba(184,212,255,.16), transparent 24%),
+    linear-gradient(135deg,#121a2c 0%,#1a2340 58%,#243055 100%);
+}
+.theme-general .topbar-actions .button-secondary{
+  background:#fff;
+  color:var(--text);
+  border-color:rgba(20,32,51,.10);
+}
+.theme-general #principal .surface,
+.theme-general #secundario .surface,
+.theme-general #confianza .surface,
+.theme-general #contacto .surface{
+  background:rgba(255,255,255,.90);
+}
+.theme-general .footer-surface{
+  background:linear-gradient(135deg,#121a2c,#1a2340);
+}
+
 @media (max-width:980px){
   .hero-grid,
   .feature-grid,
   .stats-grid,
-  .contact-grid{
+  .contact-grid,
+  .trust-list-premium{
     grid-template-columns:1fr;
   }
 
@@ -422,6 +685,14 @@ section,.section{
 
   .hero{
     padding-top:18px;
+  }
+
+  .section-surface{
+    padding:24px;
+  }
+
+  .process-item{
+    grid-template-columns:1fr;
   }
 }
 
@@ -459,7 +730,9 @@ section,.section{
 
   .feature-card,
   .stat-card,
-  .contact-card{
+  .contact-card,
+  .process-item,
+  .trust-item-premium{
     padding:22px;
   }
 }
