@@ -1,63 +1,215 @@
-<!DOCTYPE html>
-<html lang="es">
+<!doctype html>
+<html lang="es-MX">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Cocina Mexicana El Sabor</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Cocina Mexicana El Sabor</title>
+  <meta name="description" content="Cocina mexicana tradicional con platillos de la regi�n: tacos al pastor, mole poblano, enchiladas suizas, pozole y especialidades de la casa, preparados con ingredientes frescos todos los d�as.">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="topbar">
-        <div class="container">
-            <div class="brand">
-                <svg class="brand-mark" xmlns="http://www.w3.org/2000/svg" width="100" height="50">
-                    <text x="0" y="40" font-family="Arial" font-size="40" fill="red">El Sabor</text>
-                </svg>
-                <span class="brand-copy">Cocina Mexicana</span>
-            </div>
+  <div class="site-shell">
+    <header class="section" id="inicio">
+      <div class="container">
+        <div class="topbar">
+          <a class="brand" href="#inicio" aria-label="Cocina Mexicana El Sabor">
+            <span class="brand-mark"><svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <defs>
+    <linearGradient id="brandGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="var(--primary)" />
+      <stop offset="100%" stop-color="var(--primary-2)" />
+    </linearGradient>
+  </defs>
+  <rect x="4" y="4" width="56" height="56" rx="18" fill="url(#brandGrad)" />
+  <text x="32" y="39" text-anchor="middle" fill="#ffffff" font-size="22" font-family="Arial, sans-serif" font-weight="700">CM</text>
+</svg></span>
+            <span class="brand-copy">
+              <strong>Cocina Mexicana El Sabor</strong>
+              <span>restaurante en León, Guanajuato</span>
+            </span>
+          </a>
+          <div class="topbar-actions">
+            <a class="button-secondary" href="#especialidades">Especialidades</a>
+            <a class="button" href="tel:4770000000">Reservar Ahora</a>
+          </div>
         </div>
+      </div>
     </header>
-    <section class="hero">
+
+    <main>
+      <section class="hero">
         <div class="container hero-grid">
-            <div class="hero-copy">
-                <h1>Bienvenidos a Cocina Mexicana El Sabor</h1>
-                <p>Disfruta de la auténtica cocina mexicana con platillos tradicionales preparados con los mejores ingredientes.</p>
-                <a href="#contacto" class="button">Contáctanos</a>
+          <div class="hero-copy">
+            <span class="kicker">Descubre la riqueza de la cocina mexicana</span>
+            <h1>Cocina Mexicana El Sabor</h1>
+            <p>Sumérgete en una experiencia culinaria auténtica en León, donde cada platillo cuenta una historia de tradición y pasión por la buena comida.</p>
+            <div class="hero-actions">
+              <a class="button" href="tel:4770000000">Reservar Ahora</a>
+              <a class="button-secondary" href="https://maps.google.com/?q=Centro+de+Leon+Guanajuato">Ver Menú</a>
             </div>
+            <ul class="tag-list"><li class="tag">restaurante</li><li class="tag">León, Guanajuato</li><li class="tag">premium, sobrio, apetitoso</li><li class="tag">acogedor, tradicional</li></ul>
+            <div class="hero-note">
+              Lunes a sábado 13:00-22:00, domingo 13:00-20:00
+            </div>
+          </div>
+
+          <aside class="hero-panel">
             <div class="hero-art">
-                <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200">
-                    <circle cx="100" cy="100" r="80" fill="orange" />
-                </svg>
+              <span class="hero-orb one"></span>
+              <span class="hero-orb two"></span>
+              <svg viewBox="0 0 520 420" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <defs>
+    <linearGradient id="plateGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="rgba(255,255,255,.92)" />
+      <stop offset="100%" stop-color="rgba(255,255,255,.62)" />
+    </linearGradient>
+    <linearGradient id="foodGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="var(--primary-2)" />
+      <stop offset="100%" stop-color="var(--primary)" />
+    </linearGradient>
+  </defs>
+  <ellipse cx="260" cy="270" rx="168" ry="92" fill="url(#plateGrad)" />
+  <ellipse cx="260" cy="270" rx="124" ry="58" fill="rgba(20,32,51,.06)" />
+  <circle cx="214" cy="242" r="26" fill="url(#foodGrad)" opacity=".92" />
+  <circle cx="260" cy="228" r="34" fill="var(--accent)" opacity=".96" />
+  <circle cx="310" cy="246" r="24" fill="var(--primary)" opacity=".9" />
+  <path d="M180 176c18-22 38-34 60-34 22 0 42 12 60 34" stroke="rgba(20,32,51,.18)" stroke-width="8" stroke-linecap="round" fill="none" />
+  <path d="M214 170c-8-16-6-34 8-50" stroke="rgba(255,255,255,.72)" stroke-width="6" stroke-linecap="round" fill="none" />
+  <path d="M260 164c-6-18-2-36 10-50" stroke="rgba(255,255,255,.72)" stroke-width="6" stroke-linecap="round" fill="none" />
+  <path d="M306 170c-4-16 0-34 16-48" stroke="rgba(255,255,255,.72)" stroke-width="6" stroke-linecap="round" fill="none" />
+</svg>
             </div>
+          </aside>
         </div>
-    </section>
-    <section class="section">
-        <div class="container">
-            <h2 class="section-head">Nuestros Platillos</h2>
-            <p>Cocina mexicana tradicional con platillos de la región: tacos al pastor, mole poblano, enchiladas suizas, pozole y especialidades de la casa.</p>
-        </div>
-    </section>
-    <section class="section surface">
-        <div class="container">
-            <h2 class="section-head">Por qué elegirnos</h2>
-            <p>Ambiente familiar, comida tradicional mexicana, y atención al cliente excepcional.</p>
-        </div>
-    </section>
-    <section id="contacto" class="section">
-        <div class="container contact-grid">
-            <h2 class="section-head">Contáctanos</h2>
-            <div class="contact-card">
-                <p>Teléfono: 477 000 0000</p>
-                <p>Horario: Lunes a sábado 13:00-22:00, domingo 13:00-20:00</p>
-                <a href="https://maps.google.com/?q=Centro+de+Leon+Guanajuato" class="button">Ubicación</a>
-                <a href="https://www.instagram.com/elsabor.leon" class="button button-secondary">Síguenos en Instagram</a>
-            </div>
-        </div>
-    </section>
+      </section>
+
+      <section id="especialidades" class="section">
+  <div class="container">
+    <div class="surface section-surface">
+      <div class="section-head">
+        <span class="kicker">Especialidades</span>
+        <h2>Nuestros Platillos Estrella</h2>
+        <p>En Cocina Mexicana El Sabor, cada platillo es una celebración de la herencia culinaria mexicana. Utilizamos ingredientes frescos y recetas tradicionales para ofrecerte lo mejor de nuestra región.</p>
+      </div>
+      <div class="feature-grid">
+        
+          <article class="feature-card">
+            <strong>Tacos al Pastor</strong>
+            <p>Deliciosos tacos hechos con carne de cerdo marinada en adobo y cocinados al trompo, acompañados de piña y cebolla.</p>
+          </article>
+        
+          <article class="feature-card">
+            <strong>Mole Poblano</strong>
+            <p>Un exquisito mole hecho a base de chiles secos, chocolate y especias, servido con pollo.</p>
+          </article>
+        
+          <article class="feature-card">
+            <strong>Enchiladas Suizas</strong>
+            <p>Tortillas rellenas de pollo, bañadas en salsa verde y cubiertas con crema y queso.</p>
+          </article>
+        
+          <article class="feature-card">
+            <strong>Pozole</strong>
+            <p>Sopa tradicional de maíz hominy, preparada con carne de cerdo y acompañada de rábanos, lechuga y orégano.</p>
+          </article>
+        
+          <article class="feature-card">
+            <strong>Especialidades de la Casa</strong>
+            <p>Descubre nuestras creaciones únicas que combinan sabores auténticos con un toque innovador.</p>
+          </article>
+        
+      </div>
+    </div>
+  </div>
+</section>
+<section id="diferenciales" class="section">
+  <div class="container">
+    <div class="surface section-surface">
+      <div class="section-head">
+        <span class="kicker">Diferenciales</span>
+        <h2>Por Qué Elegirnos</h2>
+        <p>En Cocina Mexicana El Sabor, nos enorgullece ofrecerte una experiencia gastronómica inigualable. Aquí tienes algunas razones para visitarnos:</p>
+      </div>
+      <div class="stats-grid">
+        
+          <article class="stat-card">
+            <strong>Confianza en la Calidad</strong>
+            <p>Utilizamos solo ingredientes frescos y de la más alta calidad en todos nuestros platillos.</p>
+          </article>
+        
+          <article class="stat-card">
+            <strong>Sabor Auténtico</strong>
+            <p>Cada platillo es una representación fiel de la rica tradición culinaria mexicana.</p>
+          </article>
+        
+          <article class="stat-card">
+            <strong>Ambiente Acogedor</strong>
+            <p>Disfruta de un espacio familiar y cálido, ideal para compartir momentos especiales.</p>
+          </article>
+        
+          <article class="stat-card">
+            <strong>Servicio Excepcional</strong>
+            <p>Nuestro personal está comprometido a brindarte una atención personalizada y amigable.</p>
+          </article>
+        
+          <article class="stat-card">
+            <strong>Proceso Artesanal</strong>
+            <p>Cada platillo es preparado con dedicación y esmero, garantizando una experiencia única.</p>
+          </article>
+        
+      </div>
+    </div>
+  </div>
+</section>
+<section id="contacto" class="section">
+  <div class="container">
+    <div class="surface section-surface">
+      <div class="section-head">
+        <span class="kicker">Contacto</span>
+        <h2>Contáctanos</h2>
+        <p>Estamos aquí para atenderte. No dudes en ponerte en contacto con nosotros para reservas o consultas.</p>
+      </div>
+      <div class="contact-grid">
+        
+          <article class="contact-card">
+            <h3>Telefono</h3>
+            <p><a href="tel:4770000000">477 000 0000</a></p>
+          </article>
+        
+          <article class="contact-card">
+            <h3>Horario</h3>
+            <p><span>Lunes a sábado 13:00-22:00, domingo 13:00-20:00</span></p>
+          </article>
+        
+          <article class="contact-card">
+            <h3>Ubicacion</h3>
+            <p><a href="https://maps.google.com/?q=Centro+de+Leon+Guanajuato" target="_blank" rel="noopener noreferrer">León, Guanajuato</a></p>
+          </article>
+        
+          <article class="contact-card">
+            <h3>Redes</h3>
+            <p><a href="#contacto" target="_blank" rel="noopener noreferrer">Instagram</a></p>
+          </article>
+        
+      </div>
+      <div class="inline-links"><a class="button" href="tel:4770000000">477 000 0000</a><a class="button-secondary" href="https://maps.google.com/?q=Centro+de+Leon+Guanajuato">Ver Menú</a></div>
+    </div>
+  </div>
+</section>
+    </main>
+
     <footer class="site-footer">
-        <div class="container">
-            <p>&copy; 2023 Cocina Mexicana El Sabor. Todos los derechos reservados.</p>
+      <div class="container">
+        <div class="surface footer-surface">
+          <div class="footer-meta">
+            <strong>Cocina Mexicana El Sabor</strong>
+            <span>León, Guanajuato</span>
+            <span>restaurante</span>
+            <span>Lunes a sábado 13:00-22:00, domingo 13:00-20:00</span>
+          </div>
         </div>
+      </div>
     </footer>
+  </div>
 </body>
 </html>
