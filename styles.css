@@ -167,18 +167,17 @@ section,.section{padding:38px 0}
 }
 
 :root {
-    --color-primario: red;
-    --color-secundario: orange;
-    --color-fondo: cream;
+    --color-primary: red;
+    --color-secondary: orange;
+    --color-background: cream;
 }
 .hero {
-    background-color: var(--color-fondo);
+    background-color: var(--color-background);
 }
-.section {
-    padding: 20px;
+.section-head {
+    color: var(--color-primary);
 }
-.contact-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+.button {
+    background-color: var(--color-secondary);
+    color: white;
 }
