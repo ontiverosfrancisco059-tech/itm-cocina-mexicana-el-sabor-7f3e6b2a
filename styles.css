@@ -167,11 +167,11 @@ section,.section{padding:38px 0}
 }
 
 :root{
-  --bg:#14181f;
-  --bg-2:#1d242e;
-  --primary:#2f5cff;
-  --primary-2:#7fa2ff;
-  --accent:#d4deff;
+  --bg:#121a2c;
+  --bg-2:#1a2340;
+  --primary:#375dfb;
+  --primary-2:#6aa8ff;
+  --accent:#b8d4ff;
 }
 
 .topbar-actions{
