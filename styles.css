@@ -167,9 +167,9 @@ section,.section{padding:38px 0}
 }
 
 :root {
-    --color-rojo: #C0392B;
-    --color-naranja: #E67E22;
-    --color-crema: #FDF6E3;
+    --color-rojo: #FF0000;
+    --color-naranja: #FFA500;
+    --color-crema: #FFFDD0;
 }
 .hero {
     background-color: var(--color-crema);
@@ -177,14 +177,9 @@ section,.section{padding:38px 0}
 .section {
     padding: 20px;
 }
-.feature-card {
-    border: 1px solid var(--color-rojo);
-    border-radius: 5px;
-    padding: 10px;
-    margin: 10px;
-}
-.contact-card {
-    padding: 15px;
-    border: 1px solid var(--color-naranja);
-    border-radius: 5px;
+.button {
+    background-color: var(--color-rojo);
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
 }
