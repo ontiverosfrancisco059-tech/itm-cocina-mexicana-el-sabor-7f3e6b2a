@@ -167,25 +167,18 @@ section,.section{padding:38px 0}
 }
 
 :root {
-    --color-rojo: #FF0000;
-    --color-naranja: #FFA500;
-    --color-crema: #FFFDD0;
+    --color-primario: red;
+    --color-secundario: orange;
+    --color-fondo: cream;
 }
 .hero {
-    background-color: var(--color-crema);
+    background-color: var(--color-fondo);
 }
 .section {
     padding: 20px;
 }
-.button {
-    background-color: var(--color-rojo);
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-}
-.button-secondary {
-    background-color: var(--color-naranja);
-    color: black;
-    padding: 10px 20px;
-    text-decoration: none;
+.contact-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
