@@ -167,11 +167,11 @@ section,.section{padding:38px 0}
 }
 
 :root{
-  --bg:#20120f;
-  --bg-2:#2b1814;
-  --primary:#c7582b;
-  --primary-2:#f0a33a;
-  --accent:#ffd48c;
+  --bg:#121a2c;
+  --bg-2:#1a2340;
+  --primary:#375dfb;
+  --primary-2:#6aa8ff;
+  --accent:#b8d4ff;
 }
 
 .topbar-actions{
@@ -195,12 +195,42 @@ section,.section{padding:38px 0}
 }
 
 .feature-card strong,
-.stat-card strong{
+.stat-card strong,
+.process-copy strong{
   display:block;
   margin-bottom:8px;
   font-size:1.05rem;
 }
 
+.process-list{
+  display:grid;
+  gap:14px;
+}
+
+.process-item{
+  display:grid;
+  grid-template-columns:56px minmax(0,1fr);
+  gap:16px;
+  align-items:start;
+  padding:18px 20px;
+  border-radius:18px;
+  background:#fff;
+  border:1px solid rgba(20,32,51,.08);
+  box-shadow:0 14px 40px rgba(10,20,35,.07);
+}
+
+.process-index{
+  width:40px;
+  height:40px;
+  border-radius:999px;
+  display:grid;
+  place-items:center;
+  background:linear-gradient(135deg,var(--primary),var(--primary-2));
+  color:#fff;
+  font-weight:800;
+}
+
+.process-copy p,
 .contact-card p{
   margin:0;
 }
@@ -245,5 +275,9 @@ section,.section{padding:38px 0}
 
   .section-surface{
     padding:22px;
+  }
+
+  .process-item{
+    grid-template-columns:1fr;
   }
 }
