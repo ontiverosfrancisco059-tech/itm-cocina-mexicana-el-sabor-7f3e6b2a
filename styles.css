@@ -167,25 +167,17 @@ section,.section{padding:38px 0}
 }
 
 :root {
-    --color-primary: red;
-    --color-secondary: orange;
-    --color-background: cream;
+    --color-rojo: #FF0000;
+    --color-naranja: #FFA500;
+    --color-crema: #FFFDD0;
 }
 .hero {
-    background-color: var(--color-background);
+    background-color: var(--color-crema);
 }
-.section {
-    padding: 20px;
+.feature-card {
+    border: 1px solid var(--color-rojo);
 }
 .button {
-    background-color: var(--color-primary);
+    background-color: var(--color-naranja);
     color: white;
-    padding: 10px 15px;
-    text-decoration: none;
-}
-.button-secondary {
-    background-color: var(--color-secondary);
-    color: white;
-    padding: 10px 15px;
-    text-decoration: none;
 }
